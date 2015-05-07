@@ -1,0 +1,25 @@
+﻿<Window x:Class="PZW_4.View.UserEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PZW_4.View"
+        mc:Ignorable="d"
+        Title="Edit User Name" Height="300" Width="300">
+    <Grid DataContext="{Binding Path=User}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Content="Name:" Width="50"/>
+        <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Text="{Binding Path=Name, UpdateSourceTrigger=Explicit}" x:Name="NameField" Width="200"></TextBox>
+
+        <Button Grid.Row="1" Grid.Column="1" Content="Save" Width="50" HorizontalAlignment="Right" Margin="5" x:Name="ButtonSave"></Button>
+    </Grid>
+</Window>

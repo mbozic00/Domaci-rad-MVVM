@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="PZW_4.View.CurrentUserCollectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:view="clr-namespace:PZW_4.View"
+             xmlns:viewModel="clr-namespace:PZW_4.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignWidth="200">
+    <Grid>
+
+        <ListBox ItemsSource="{Binding CurrentUserViewModels}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="{x:Type viewModel:UserViewModel}">
+                    <view:CurrentUserView></view:CurrentUserView>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</UserControl>
